@@ -20,7 +20,7 @@ export default async function handler(req, res) {
   req.on("end", async () => {
     try {
       const parsed = JSON.parse(body);
-      const response = await fetch("https://libretranslate.de/translate", {
+      const response = await fetch("https://translate.argosopentech.com/translate", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(parsed)
